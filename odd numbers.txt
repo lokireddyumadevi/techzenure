@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class DisplayFirstNOddNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+        
+        System.out.println("The first " + n + " odd numbers are:");
+        displayFirstNOddNumbers(n);
+        
+        scanner.close();
+    }
+    
+    public static void displayFirstNOddNumbers(int n) {
+        int count = 0;
+        int number = 1;
+        
+        while (count < n) {
+            if (number % 2 != 0) {
+                System.out.print(number + " ");
+                count++;
+            }
+            number++;
+        }
+    }
+}
